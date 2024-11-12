@@ -1,0 +1,9 @@
+runtime: python39  # You can also use another runtime, depending on your needs
+
+handlers:
+  - url: /index.html  # Serve the index.html file at this path
+    static_files: index.html  # Path to your index.html
+    upload: index.html  # Upload file pattern
+
+  - url: /.*  # Catch-all handler for all other URLs
+    static_dir: .  # Serve all other static files (like CSS, images, etc.)
