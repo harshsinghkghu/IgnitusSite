@@ -1,0 +1,6 @@
+runtime: python39  # Or any other suitable runtime, depending on your needs
+
+handlers:
+- url: /.*  # Match all URLs
+  static_files: /home/harshsinghkghu/IgnitusSite/HarshCopy/index.html
+  upload: /home/harshsinghkghu/IgnitusSite/HarshCopy/index.html
