@@ -1,0 +1,6 @@
+runtime: python39  # Or any other suitable runtime, depending on your needs
+
+handlers:
+- url: /.*  # Match all URLs
+  static_files: index.html
+  upload: index.html
