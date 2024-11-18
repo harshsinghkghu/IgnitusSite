@@ -1,13 +1,10 @@
-#runtime: python39  # You can also use another runtime, depending on your needs
+runtime: python39  # Use Python runtime for simplicity
 
-#handlers:
- # - url: /index.html  # Serve the index.html file at this path
-#    static_files: index.html  # Path to your index.html
-#    upload: index.html  # Upload file pattern
-#
-#  - url: /.*  # Catch-all handler for all other URLs
-#    static_dir: .  # Serve all other static files (like CSS, images, etc.)
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
 
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy', '--quiet']
+- url: /(.*)
+  static_files: \1
+  upload: .*
